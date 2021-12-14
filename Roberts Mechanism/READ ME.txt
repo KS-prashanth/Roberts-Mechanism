@@ -1,0 +1,19 @@
+
+GeoGebra Link : https://www.geogebra.org/classic/tqqub8vt
+
+##General Instructions :
+opening GeoGebra file : 
+->  install the Geogebra software .
+-> click on open with Geogebra on the file which is in this folder.
+
+#Team_16_Analysis:
+-> This File  consists of the matlab code  which has position , velocity and acceleration analysis along with their plots.
+
+#Team_16_Animation:
+-> This file consists of the python code .
+-> Run this file using a python compiler , the animation window pop's up.
+
+
+
+
+

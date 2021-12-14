@@ -1,0 +1,63 @@
+import matplotlib.pyplot as plt
+import math
+a, b, c, d = 3, 5, 3, 8.5
+while True:
+    for th2 in range(70, 30, -1):
+
+        Ax = a*math.cos(math.radians(th2))
+        Ay = a*math.sin(math.radians(th2))
+        P = ((Ay**2)/((Ax-d)**2)) + 1
+        S = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))
+        Q = (2*Ay*(d-S))/(Ax-d)
+        R = ((d-S)**2)-(c**2)
+        Byp = (-Q+math.sqrt((Q**2)-4*P*R))/(2*P)
+        Byn = (-Q-math.sqrt((Q**2)-4*P*R)/(2*P))
+        Bxp = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))-((Ay*Byp)/(Ax-d))
+        Bxn = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))-((Ay*Byn)/(Ax-d))
+        th3 = (math.atan((Byp-Ay)/(Bxp-Ax)))
+        th4 = (math.atan((Byp)/(Bxp-d)))
+        plt.plot([0, Ax, Bxp, d], [-2.5, Ay, Byp, -2.5])
+        plt.plot([Ax, Ax+2.5, Bxp], [Ay, -4, Byp])
+        plt.plot([-2.5, 10], [-4, -4])
+        plt.axis([-8, 14, -8, 12])
+        plt.pause(0.01)
+        plt.clf()
+    for th2 in range(30, 70, 1):
+        Ax = a*math.cos(math.radians(th2))
+        Ay = a*math.sin(math.radians(th2))
+        P = ((Ay**2)/((Ax-d)**2))+1
+        S = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))
+        Q = (2*Ay*(d-S))/(Ax-d)
+        R = ((d-S)**2)-(c**2)
+        Byp = (-Q+math.sqrt((Q**2)-4*P*R))/(2*P)
+        Byn = (-Q-math.sqrt((Q**2)-4*P*R)/(2*P))
+        Bxp = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))-((Ay*Byp)/(Ax-d))
+        Bxn = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))-((Ay*Byn)/(Ax-d))
+        th3 = (math.atan((Byp-Ay)/(Bxp-Ax)))
+        th4 = (math.atan((Byp)/(Bxp-d)))
+        plt.plot([0, Ax, Bxp, d], [-2.5, Ay, Byp, -2.5])
+        plt.plot([Ax, Ax+2.5, Bxp], [Ay, -4, Byp])
+        plt.plot([-2.5, 10], [-4, -4])
+        plt.axis([-8, 14, -8, 12])
+        plt.pause(0.01)
+        plt.clf()
+    for th2 in range(70, 30, -1):
+        Ax = a*math.cos(math.radians(th2))
+        Ay = a*math.sin(math.radians(th2))
+        P = ((Ay**2)/((Ax-d)**2))+1
+        S = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))
+        Q = (2*Ay*(d-S))/(Ax-d)
+        R = ((d-S)**2)-(c**2)
+        Byp = (-Q+math.sqrt((Q**2)-4*P*R))/(2*P)
+        Byn = (-Q-math.sqrt((Q**2)-4*P*R)/(2*P))
+        Bxp = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))-((Ay*Byp)/(Ax-d))
+        Bxn = ((a**2)-(b**2)+(c**2)-(d**2))/(2*(Ax-d))-((Ay*Byn)/(Ax-d))
+        th3 = (math.atan((Byp-Ay)/(Bxp-Ax)))
+        th4 = (math.atan((Byp)/(Bxp-d)))
+        plt.plot([0, Ax, Bxp, d], [-2.5, Ay, Byp, -2.5])
+        plt.plot([Ax, Ax+2.5, Bxp], [Ay, -4, Byp])
+        plt.plot([-2.5, 10], [-4, -4])
+        plt.axis([-8, 14, -8, 12])
+        plt.pause(0.01)
+        plt.clf()
+plt.show()
